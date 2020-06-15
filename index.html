@@ -5,31 +5,17 @@
     <title>InfoFootball</title>
     <meta name="description" content="Info Football" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/logo.png">
-    <link rel="stylesheet" href="/css/materialize.css">
-    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="shortcut icon" href="/src/image/logo.png">
+    <link rel="stylesheet" href="/src/css/materialize.css">
+    <link rel="apple-touch-icon" href="src/image/logo.png">
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0D47A1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 <body>
-    <nav class="light-blue darken-4" role="navigation">
-        <div class="nav-wrapper container">
-          <a href="#" class="brand-logo" id="logo-container">Info Football</a>
-          <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
-          <ul class="topnav right hide-on-med-and-down"></ul>
-          <ul class="sidenav" id="nav-mobile"></ul>
-        </div>
-      </nav>
-      <div class="container" id="body-content"></div>
-      <script src="js/api.js"></script>
-      <script src="js/dataapi.js"></script>
-      <script src="js/datacache.js"></script>
-      <script src="js/idb.js"></script>
-      <script src="js/db.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="registrasi.js"></script>
+    <app-bar></app-bar>
+    <div class="container" id="body-content"></div>
+<script src="src/js/materialize.js"></script>
+<script src="app.js" type="module"></script>
 </body>
 </html>

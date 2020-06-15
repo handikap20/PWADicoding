@@ -10,31 +10,35 @@ if (workbox)
 
 workbox.precaching.precacheAndRoute([
     { url : '/', revision : '1' },
-    { url : '/liga.jpg', revision : '1' },
+    { url : '/app.js', revision : '1'},
+    { url : '/app-detail.js', revision : '1'},
+    { url : '/src/image/liga.jpg', revision : '1' },
     { url : '/registrasi.js', revision : '1' },
     { url :'/manifest.json', revision : '1' },
     { url :'/nav.html', revision : '1' },
     { url :'/index.html', revision : '1' },
     { url :'/push.js', revision : '1' },
     { url :'/detailclub.html',  revision : '1' },
-    { url :'/pages/home.html', revision : '1' },
-    { url :'/pages/liga.html', revision : '1' },
-    { url :'/pages/saved.html', revision : '1' },
-    { url :'/pages/team.html', revision : '1' },
-    { url :'/css/materialize.min.css', revision : '1' },
-    { url :'/css/materialize.css', revision : '1' },
-    { url :'/js/api.js', revision : '1' },
-    { url :'/js/nav.js', revision : '1' },
-    { url :'/js/dataapi.js', revision : '1' },
-    { url :'/js/datacache.js', revision : '1' },
-    { url :'/js/db.js', revision : '1' },
-    { url :'/js/detail.js', revision : '1' },
-    { url :'/js/idb.js', revision : '1' },
-    { url :'/js/materialize.js', revision : '1' },
-    { url :'/js/materialize.min.js', revision : '1' },
-    { url :'/logo.png', revision : '1' },
-    { url :'/logo192.png', revision : '1' },
-    { url :'/club.svg', revision : '1' }
+    { url :'/src/pages/home.html', revision : '1' },
+    { url :'/src/pages/liga.html', revision : '1' },
+    { url :'/src/pages/saved.html', revision : '1' },
+    { url :'/src/pages/team.html', revision : '1' },
+    { url :'/src/component/app-bar.js', revision : '1'},
+    { url :'/src/component/btn.js', revision : '1'},
+    { url :'/src/component/loader.js', revision : '1'},
+    { url :'/src/component/loader-circle.js', revision : '1'},
+    { url :'/src/css/materialize.css', revision : '1' },
+    { url :'/src/js/api.js', revision : '1' },
+    { url :'/src/js/nav.js', revision : '1' },
+    { url :'/src/js/dataapi.js', revision : '1' },
+    { url :'/src/js/datacache.js', revision : '1' },
+    { url :'/src/js/db.js', revision : '1' },
+    { url :'/src/js/detail.js', revision : '1' },
+    { url :'/src/js/idb.js', revision : '1' },
+    { url :'/src/js/materialize.js', revision : '1' },
+    { url :'/src/image/logo.png', revision : '1' },
+    { url :'/src/image/logo192.png', revision : '1' },
+    { url :'/src/image/club.svg', revision : '1' }
     ], {
     ignoreURLParametersMatching: [/.*/]
   });
@@ -42,33 +46,10 @@ workbox.precaching.precacheAndRoute([
   workbox.routing.registerRoute( 
     /^https:\/\/api\.football-data\.org\/v2\//,
     workbox.strategies.staleWhileRevalidate({
-      cacheName: 'news',
+      cacheName: 'footbal',
       plugins:[
         new workbox.cacheableResponse.Plugin({statuses:[0,200]}),
         new workbox.expiration.Plugin({maxAgeSeconds: 60 * 30}),
       ]
     })
   );
-  
-  
-  // self.addEventListener('push', (event) => {
-  //   let body;
-  //   if (event.data) {
-  //     body = event.data.text();
-  //   } else {
-  //     body = 'Informasi mengenai liga champions';
-  //   }
-  //   const options = {
-  //     body: body,
-  //     icon: 'logo.png',
-  //     badge: 'logo.png',
-  //     vibrate: [100, 50, 100],
-  //     data: {
-  //       dateOfArrival: Date.now(),
-  //       primaryKey: 1
-  //     }
-  //   };
-  //   event.waitUntil(
-  //     self.registration.showNotification('Halo selamat datang di apilkasi infofootball', options)
-  //   );
-  // });

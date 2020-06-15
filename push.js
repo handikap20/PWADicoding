@@ -7,12 +7,12 @@ const vapidKeys = {
    
 
 const pushSubscription = {
-    endpoint: 'https://fcm.googleapis.com/fcm/send/dnPl-kKUPSI:APA91bHghdhS7-y3OxzBGOqtq1M_V9i_2aEoz4hOgWWf-yMxtB2X2yQCXp6xxk7GapMjuiT4C_fqrIttxNZo_duGkP15zxNIve7XQTq6prAEXUjnjE5sesYkNiFxmX-v0mPFdCJanWwq',
+    endpoint: 'https://fcm.googleapis.com/fcm/send/cbo6gKjRTag:APA91bGJAapar_F0T7toiAfu-btcuvzfURKC6LGTG9M5UdIPsfCygyogZEwWJKvVQgKBP4VNKeYmDBpd5KJe-UE9BUA4lt1SOy95gtRJ8AFW-h8nWIRkxm8eGwvF_ShUvQ8LGHSGSbQl',
     keys: {
-        p256dh: 'BHCUsCVpMpPINmNPjcYhRLUealZ+SjEjyirLaDdASVEcZCswSUrIwtlaJIyXydyZBclxoHdOsiK5EkF2VZpkC44=',
-        auth: 'QXL/ya5EyhDt6cwSJ1xa0A=='
+        p256dh: 'BMqirVX5IDvztFygJW2ZnviIBG6m2ov6JAohCeNw4qZFqyG0Cobrnv8A8qNQBbfTiifKQfk0Q7eMrztwvbHjyWs=',
+        auth: 'U/mtbMlNRZQrBiPWcnX9VA=='
       }
-};
+}
 
 webpush.setVapidDetails(
     'mailto:example@yourdomain.org',

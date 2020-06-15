@@ -5,47 +5,19 @@
 	<title>Detail Team</title>
 	<meta name="description" content="Info Football" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="shortcut icon" href="logo.png">
-	<link rel="stylesheet" href="css/materialize.min.css" />
-	<link rel="apple-touch-icon" href="/logo.png">
+	<link rel="shortcut icon" href="/src/image/logo.png">
+	<link rel="stylesheet" href="/src/css/materialize.css" />
+	<link rel="apple-touch-icon" href="/src/image/logo.png">
 	<link rel="manifest" href="/manifest.json" />
-	<meta name="theme-color" content="#ffffff" />
+	<meta name="theme-color" content="#0D47A1" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-	<nav class="light-blue darken-4" role="navigation">
-		<div class="nav-wrapper container">
-			<a href="./index.html#team" class="brand-logo" id="logo-container">Info Football</a>
-			<a href="./index.html#team" class="sidenav-trigger" data-target="nav-mobile">
-				<i class="material-icons">arrow_back</i>
-			</a>
-			<ul class="topnav right hide-on-med-and-down"></ul>
-			<ul class="sidenav" id="nav-mobile"></ul>
-		</div>
-	</nav>
-	<div class="row center-align" id="loader">
-		<div class="progress">
-			<div class="indeterminate"></div>
-		</div>
-	  </div>
+	<app-bar></app-bar>
+	<loader-el></loader-el>
 	<div class="container" id="body-content"></div>
-
-	<div class="fixed-action-btn">
-		<a class="btn-floating btn-large blue" id="save">
-			<i class="large material-icons">save</i>
-		</a>
-		<a class="btn-floating btn-large red" id="delete">
-			<i class="large material-icons">delete_forever</i>
-		</a>
-	</div>
-	<script src="/registrasi.js"></script>
-	<script src="/js/detail.js"></script>
-	<script src="/js/datacache.js"></script>
-	<script src="/js/dataapi.js"></script>
-	<script src="/js/api.js"></script>
-	<script src="/js/idb.js"></script>
-	<script src="/js/db.js"></script>
-	<script src="/js/materialize.js"></script>
-
+	<btn-detail></btn-detail>
+	<script src="src/js/materialize.js"></script>
+	 <script src="app-detail.js" type="module"></script>
 </body>
 </html>
